@@ -10,6 +10,7 @@ process.env.NODE_ENV === 'production' ? cookieOptions = {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'none' as const,
+    path: '/',
 } : cookieOptions = {
     httpOnly: true,
     secure: false,
