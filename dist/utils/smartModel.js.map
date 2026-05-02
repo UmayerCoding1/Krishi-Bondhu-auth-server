@@ -1,0 +1,1 @@
+{"version":3,"file":"smartModel.js","sourceRoot":"","sources":["../../src/utils/smartModel.ts"],"names":[],"mappings":";;;AAAO,MAAM,cAAc,GAAG,CAAC,OAAe,EAAE,EAAE;IAC9C,IAAI,OAAO,CAAC,MAAM,GAAG,EAAE,EAAE,CAAC;QACtB,OAAO;YACH,0BAA0B;YAC1B,4BAA4B;SAC/B,CAAA;IACL,CAAC;IAED,OAAO;QACH,0BAA0B;QAC1B,4BAA4B;KAC/B,CAAA;AACL,CAAC,CAAA;AAZY,QAAA,cAAc,kBAY1B"}
