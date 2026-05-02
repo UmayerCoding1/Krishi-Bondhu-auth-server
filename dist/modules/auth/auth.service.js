@@ -32,7 +32,9 @@ const registerService = async (req) => {
         slug: slug
     };
     // sendEmailQueue({ to: email, sub: "Verify your email", otp });
-    await (0, sendEmail_1.sendEmail)(email, "Verify your email", otp);
+    (0, sendEmail_1.sendEmail)(email, "Verify your email", otp).catch((error) => {
+        console.log("Email sent failed", error);
+    });
     const user = await user_model_1.User.create({ name, email, password, otp: otpData });
     return user;
 };
