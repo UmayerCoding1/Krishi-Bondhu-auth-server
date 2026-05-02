@@ -14,6 +14,7 @@ const sendEmail_1 = require("../../services/sendEmail");
 const redis_1 = __importDefault(require("../../config/redis"));
 const registerService = async (req) => {
     const { name, email, password } = req.body;
+    console.log(email, name);
     const existingUser = await user_model_1.User.findOne({ email });
     if (existingUser) {
         if (existingUser.isVerified) {

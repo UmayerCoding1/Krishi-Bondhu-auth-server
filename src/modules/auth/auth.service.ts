@@ -13,6 +13,7 @@ import redisClient from "../../config/redis";
 
 const registerService = async (req: Request) => {
     const { name, email, password } = req.body;
+    console.log(email, name)
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
