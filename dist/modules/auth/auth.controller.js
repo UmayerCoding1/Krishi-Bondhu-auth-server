@@ -8,7 +8,7 @@ let cookieOptions;
 process.env.NODE_ENV === 'production' ? cookieOptions = {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'none',
+    sameSite: 'lax',
 } : cookieOptions = {
     httpOnly: true,
     secure: false,
