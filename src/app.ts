@@ -12,4 +12,10 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to the Auth Server!');
 });
 
+
+app.get('/users', async (req: Request, res: Response) => {
+  const users = await fetch('https://jsonplaceholder.typicode.com/users')
+  const data = await users.json()
+  res.json(data)
+})
 export default app;
