@@ -198,7 +198,9 @@ const resendOTPService = async (req) => {
         expiresAt: new Date(Date.now() + 5 * 60 * 1000),
         slug: slug
     };
-    await (0, sendEmail_1.sendEmail)(email, "Verify your email", otp);
+    (0, sendEmail_1.sendEmail)(email, "Verify your email", otp).catch((error) => {
+        console.log("Email sent failed", error);
+    });
     await user_model_1.User.updateOne({ _id: user._id }, { $set: { otp: otpData } });
     return { success: true, message: "OTP sent successfully" };
 };

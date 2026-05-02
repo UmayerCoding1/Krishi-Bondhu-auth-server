@@ -251,7 +251,9 @@ const resendOTPService = async (req: Request) => {
         slug: slug
     }
 
-    await sendEmail(email, "Verify your email", otp)
+    sendEmail(email, "Verify your email", otp).catch((error) => {
+        console.log("Email sent failed", error);
+    });
 
     await User.updateOne({ _id: user._id }, { $set: { otp: otpData } });
     return { success: true, message: "OTP sent successfully" };
