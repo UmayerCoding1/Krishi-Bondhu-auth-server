@@ -6,20 +6,28 @@ import { ApiResponse } from "../../utils/ApiResponse";
 
 
 let cookieOptions;
-process.env.NODE_ENV === 'production' ? cookieOptions = {
+
+
+
+
+// production
+cookieOptions = {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
+    secure: true,
     sameSite: 'none' as const,
     path: '/',
-    maxAge: 7 * 24 * 60 * 60 * 1000,
-} : cookieOptions = {
-    httpOnly: true,
-    secure: false,
-    sameSite: 'lax' as const,
-    // maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-};
+}
 
-console.log(cookieOptions)
+
+// development
+// cookieOptions = {
+//     httpOnly: true,
+//     secure: false,
+//     sameSite: 'lax' as const,
+//     // maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+// };
+
+// console.log(cookieOptions)
 
 
 
