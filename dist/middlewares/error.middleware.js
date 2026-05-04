@@ -11,4 +11,3 @@ const globalErrorHandle = (err, req, res, next) => {
     });
 };
 exports.globalErrorHandle = globalErrorHandle;
-//# sourceMappingURL=error.middleware.js.map

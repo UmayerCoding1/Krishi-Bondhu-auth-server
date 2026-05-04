@@ -29,4 +29,3 @@ exports.diseaseLimiter = (0, express_rate_limit_1.default)({
         message: "Too many requests, try again later",
     },
 });
-//# sourceMappingURL=rateLimit.middleware.js.map

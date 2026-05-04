@@ -125,9 +125,8 @@ userSchema.methods.generateOTP = async function () {
         slug: slug
     };
     // sendEmailQueue({ to: this.email, sub: "Verify your email", otp });
-    (0, sendEmail_1.sendEmail)(this.email, "Verify your email", otp).catch((error) => {
-        console.log("Email sent failed", error);
-    });
+    console.log(otp);
+    await (0, sendEmail_1.sendEmail)(this.email, "Verify your email", otp);
     this.otp = otpData;
     return otpData;
 };
@@ -143,4 +142,3 @@ userSchema.methods.verifyOTP = function (otp) {
     return false;
 };
 exports.User = mongoose_1.models.User || (0, mongoose_1.model)("User", userSchema);
-//# sourceMappingURL=user.model.js.map

@@ -29,4 +29,3 @@ const connectDB = async () => {
     return cached.conn;
 };
 exports.connectDB = connectDB;
-//# sourceMappingURL=db.js.map

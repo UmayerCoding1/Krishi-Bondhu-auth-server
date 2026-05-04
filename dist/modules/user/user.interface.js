@@ -19,4 +19,3 @@ var STATUS;
     STATUS["BLOCK"] = "block";
     STATUS["DELETED"] = "deleted";
 })(STATUS || (exports.STATUS = STATUS = {}));
-//# sourceMappingURL=user.interface.js.map

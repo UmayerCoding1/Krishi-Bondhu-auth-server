@@ -25,4 +25,3 @@ exports.authValidation = {
     verifySchema,
     changePasswordSchema
 };
-//# sourceMappingURL=auth.validation.js.map

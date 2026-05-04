@@ -8,4 +8,3 @@ const cretateSlug = async (text) => {
     return slugify_1.default(text, { lower: true, strict: true });
 };
 exports.default = cretateSlug;
-//# sourceMappingURL=createSlug.js.map

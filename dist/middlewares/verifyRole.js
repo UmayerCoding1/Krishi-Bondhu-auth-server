@@ -21,4 +21,3 @@ const verifyRole = (roles) => {
     };
 };
 exports.verifyRole = verifyRole;
-//# sourceMappingURL=verifyRole.js.map

@@ -17,4 +17,3 @@ function verifyHashPassword(password, slug, hash) {
     return hashVerify.toString('hex') === hash;
 }
 ;
-//# sourceMappingURL=crypto-hash.js.map

@@ -1,7 +1,5 @@
 import mongoose, { Schema, model, models } from "mongoose";
-
-
-import { IUSer, ROLE, STATUS } from "./user.interface";
+import { IUSer, PLANTYPE, ROLE, STATUS } from "./user.interface";
 import { createHashPassword, verifyHashPassword } from "../../utils/crypto-hash";
 import { sendEmail } from "../../services/sendEmail";
 
@@ -130,9 +128,8 @@ userSchema.methods.generateOTP = async function () {
     }
 
     // sendEmailQueue({ to: this.email, sub: "Verify your email", otp });
-    sendEmail(this.email, "Verify your email", otp).catch((error) => {
-        console.log("Email sent failed", error);
-    });
+    console.log(otp)
+    await sendEmail(this.email, "Verify your email", otp)
     this.otp = otpData;
     return otpData;
 }

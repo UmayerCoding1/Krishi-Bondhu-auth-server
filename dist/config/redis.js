@@ -19,4 +19,3 @@ redisClient.connect().catch((err) => {
     console.error("Redis connection error", err);
 });
 exports.default = redisClient;
-//# sourceMappingURL=redis.js.map

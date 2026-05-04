@@ -1,0 +1,1 @@
+{"version":3,"file":"disease.route.js","sourceRoot":"","sources":["../../../src/modules/disease/disease.route.ts"],"names":[],"mappings":";;AAAA,qCAAiC;AACjC,6DAAyD;AACzD,mDAAgD;AAChD,iFAAwE;AAGxE,MAAM,sBAAsB,GAAG,IAAA,gBAAM,GAAE,CAAC;AAExC,sBAAsB,CAAC,IAAI,CAAC,SAAS,EAAE,qCAAc,EAAE,mBAAQ,CAAC,MAAM,CAAC,cAAc,CAAC,EAAE,sCAAiB,CAAC,gBAAgB,CAAC,CAAC;AAE5H,kBAAe,sBAAsB,CAAC"}

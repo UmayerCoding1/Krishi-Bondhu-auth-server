@@ -25,4 +25,3 @@ authRoute.get('/users', async (req, res) => {
     }
 });
 exports.default = authRoute;
-//# sourceMappingURL=auth.route.js.map

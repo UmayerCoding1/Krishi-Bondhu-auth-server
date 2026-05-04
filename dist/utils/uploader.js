@@ -14,4 +14,3 @@ class Uploader {
     }
 }
 exports.Uploader = Uploader;
-//# sourceMappingURL=uploader.js.map

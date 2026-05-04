@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fileValidator = void 0;
 class fileValidator {
+    allowedTypes;
+    maxSize;
     constructor(allowedTypes, maxSize) {
         this.allowedTypes = allowedTypes;
         this.maxSize = maxSize;
@@ -20,4 +22,3 @@ class fileValidator {
     }
 }
 exports.fileValidator = fileValidator;
-//# sourceMappingURL=fileValidator.js.map

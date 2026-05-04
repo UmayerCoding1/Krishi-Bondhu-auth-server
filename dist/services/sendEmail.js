@@ -75,4 +75,3 @@ const sendEmail = async (to, sub, otp) => {
     return { success: true };
 };
 exports.sendEmail = sendEmail;
-//# sourceMappingURL=sendEmail.js.map

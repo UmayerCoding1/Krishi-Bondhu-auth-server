@@ -5,17 +5,21 @@ const asyncHandler_1 = require("../../utils/asyncHandler");
 const auth_service_1 = require("./auth.service");
 const ApiResponse_1 = require("../../utils/ApiResponse");
 let cookieOptions;
-process.env.NODE_ENV === 'production' ? cookieOptions = {
+// production
+cookieOptions = {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
-} : cookieOptions = {
-    httpOnly: true,
-    secure: false,
-    sameSite: 'lax',
-    // maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+    secure: true,
+    sameSite: 'none',
+    path: '/',
 };
-console.log(cookieOptions);
+// development
+// cookieOptions = {
+//     httpOnly: true,
+//     secure: false,
+//     sameSite: 'lax' as const,
+//     // maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+// };
+// console.log(cookieOptions)
 const register = (0, asyncHandler_1.asyncHandler)(async (req, res) => {
     const result = await auth_service_1.authService.registerService(req);
     if (result) {
@@ -76,4 +80,3 @@ exports.authController = {
     resendOTP,
     toggleTwoFactor
 };
-//# sourceMappingURL=auth.controller.js.map

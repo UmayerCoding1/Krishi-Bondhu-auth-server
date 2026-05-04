@@ -14,4 +14,3 @@ const getSmartModels = (message) => {
     ];
 };
 exports.getSmartModels = getSmartModels;
-//# sourceMappingURL=smartModel.js.map
