@@ -35,6 +35,9 @@ app.use('/api/v1/crop', crop_route_1.default);
 app.use('/api/v1/chat', chat_route_1.default);
 app.use('/api/v1/disease', disease_route_1.default);
 app.use(error_middleware_1.globalErrorHandle);
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on http://localhost:${PORT}`);
+    });
+}
+exports.default = app;
